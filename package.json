@@ -1,0 +1,21 @@
+{
+  "name": "6764-system",
+  "version": "1.0.0",
+  "description": "6764进制(基于6763个高频中文汉字)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "6764",
+    "system",
+    "decimal",
+    "hexadecimal"
+  ],
+  "author": "Rain",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.0.3",
+    "bignumber.js": "^9.1.2"
+  }
+}
