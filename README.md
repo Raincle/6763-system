@@ -12,49 +12,9 @@
 2. 将10进制、16进制转换为6764进制
 3. 将6764进制，转换为10进制、16进制
 
-```sh
-加密后信息长度比较：
-
-举例1：表达“你好世界”，英文为“Hello world”
-
-                    h    e l    l    o   w   o   r   l    d
-        英文摩尔斯码：.... . .-.. .-.. --- .-- --- .-. .-.. -.. 
-
-                    你        好       世      界
-中文字频二叉树摩尔斯码：...-..-.. ---..-  ---...- ----...
-
-                    你              好               世              界
- 中文Unicode摩尔斯码：-..----.--..... -.--..-.-----.- -..---....-.--. ---.-.-.-..--..
-
-
-举例2：表达“我爱你”，英文为“I love you”
-
-                    i  l    o   v    e y    o   u
-        英文摩尔斯码：.. .-.. --- ...- . -.-- --- ..- 
-
-                    我     爱        你
-中文字频二叉树摩尔斯码：..--- ...-----. ...-..-.-
-
-                    我              爱               你
- 中文Unicode摩尔斯码：--...-....-...- ---..-...--...- -..----.--.....
-
-
-举例3：表达“中国”，英文为“China”
-
-                    c    h    i  n  a
-        英文摩尔斯码：-.-. .... .. -. .- 
-
-                    中   国
-中文字频二叉树摩尔斯码：..- ..
-
-                    中              国
- 中文Unicode摩尔斯码：-..---...-.--.- -.-.--.------.-
-
-
-```
 ## Installation
 ```sh
-$ npm i --save 6763-system
+$ npm i --save 6764-system
 ```
 
 ## Common Usage
@@ -62,13 +22,28 @@ $ npm i --save 6763-system
 /*
  *加密解密
  */
-const { encode, decode } = require('cn-morse')
+import { to6764, toNumber } from "./src/index";
 
-const morseCode = encode('你好世界')
-console.log(morseCode) // ...-..-.. ---..- ---...- ----...
+const hello = to6764("3706792")
+console.log(hello) // 你好
+const deceimalHello = toNumber("你好")
+console.log(deceimalHello) // 3706792
 
-const chString = encode('...-..-.. ---..- ---...- ----...')
-console.log(chString) // 你好世界
+const helloHex = to6764("388fa8", 16)
+console.log(helloHex) // 你好
+const hexHello = toNumber("你好", 16)
+console.log(hexHello) // 388fa8
+
+const helloWorld = to6764("169592022349604")
+console.log(helloWorld) // 你好世界
+const deceimalHelloWorld = toNumber("你好世界")
+console.log(deceimalHelloWorld) // 169592022349604
+
+const helloWorldHex = to6764("9a3e383fb724", 16)
+console.log(helloWorldHex) // 你好世界
+const hexHelloWorld = toNumber("你好世界", 16)
+console.log(hexHelloWorld) // 9a3e383fb724
+
 ```
 
 
