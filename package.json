@@ -1,6 +1,6 @@
 {
   "name": "6764-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "6764进制(基于6763个高频中文汉字)",
   "main": "index.js",
   "scripts": {
