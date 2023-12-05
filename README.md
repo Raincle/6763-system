@@ -22,7 +22,7 @@ $ npm i --save 6764-system
 /*
  *加密解密
  */
-import { to6764, toNumber } from "6764-system";
+const { to6764, toNumber } = require("6764-system")
 
 const hello = to6764("3706792")
 console.log(hello) // 你好

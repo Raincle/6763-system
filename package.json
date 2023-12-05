@@ -1,8 +1,9 @@
 {
   "name": "6764-system",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "6764进制(基于6763个高频中文汉字)",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
